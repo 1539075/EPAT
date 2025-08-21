@@ -28,6 +28,7 @@ jobs:
         java-version: '24'
         cache: 'maven'
         cache-dependency-path: cicdWorkshop/pom.xml
+        dependency-graph: false
     - name: Build with Maven
       working-directory: cicdWorkshop
       run: mvn -B package
