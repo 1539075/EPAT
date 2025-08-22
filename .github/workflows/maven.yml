@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: read
+  security-events: none
   # ✅ 不写 security-events，就不会尝试上传 dependency graph
 
 jobs:
