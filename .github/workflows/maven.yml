@@ -38,7 +38,7 @@ jobs:
 
     - name: Build with Maven
       working-directory: cicdWorkshop
-      run: mvn -f cicdWorkshop/to/pom.xml
+      run: mvn -f cicdWorkshop/pom.xml
     - name: Publish Test Report
       uses: actions/upload-artifact@v4
       with:
