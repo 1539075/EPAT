@@ -38,7 +38,12 @@ jobs:
 
     - name: Build with Maven
       working-directory: cicdWorkshop
-      run: mvn -f pom.xml
+      run: 
+            mvn install
+            mvn compiler:compile
+            mvn org.apache.maven.plugins:maven-compiler-plugin:compile
+            mvn org.apache.maven.plugins:maven-compiler-plugin:2.0.2:compile
+            mvn -f pom.xml
     - name: Publish Test Report
       uses: actions/upload-artifact@v4
       with:
